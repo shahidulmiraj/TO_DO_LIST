@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>To do list</title>
+</head>
+<body>
+  <header>
+  </header>
+  <main class="mt-10 max-w-md mx-auto px-5">
+    <h1 class="font-bold text-5xl text-center">Task tracker</h1>
+    <form id="form" class="mt-7 flex flex-col">
+      <label for="">Enter your task</label>
+      <input id="input" class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm mt-1" placeholder="Write a task..." type="text" name="task"/>
+      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 self-center">Add</button>
+    </form>
+    <hr class="my-5 bg-gray-900">
+
+    <h3 class="font-bold text-4xl text-center underline">Task List</h3>
+    <ul id="task-list" class="mt-5">
+      <li id="task-item" class="flex justify-between items-center border p-2">
+        <p>
+          Task 1
+        </p>
+        <div>
+          <button id="task-edit" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button>
+          <button id="task-delete" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Delete</button>
+        </div>
+      </li>
+      <li id="task-item" class="flex justify-between items-center border p-2">
+        <p>
+          Task 2
+        </p>
+        <div>
+          <button id="task-edit" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button>
+          <button id="task-delete" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

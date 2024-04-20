@@ -8,7 +8,7 @@ const addTask = (e) => {
   const taskName = taskNameInput.value.trim();
 
   if (taskName === "") {
-    alert("Task is empty");
+    alert("Task cannot be empty. Please enter a task.");
     return;
   }
   const newTask = document.createElement("li");
@@ -51,6 +51,7 @@ const deleteTask = (e) => {
 //     }
 //   }
 // };
+
 const editTask = (e) => {
   if (e.target.id === "task-edit") {
     const listItem = e.target.closest("li");
@@ -65,9 +66,17 @@ const editTask = (e) => {
     input.focus();
 
     input.addEventListener("blur", () => {
-      const newParagraph = document.createElement("p");
-      newParagraph.textContent = input.value;
-      listItem.replaceChild(newParagraph, input);
+      if (input.value === "") {
+        alert("Task cannot be empty. Please enter a task.");
+        setTimeout(() => {
+          input.focus();
+        }, 0);
+      }
+      else {
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = input.value;
+        listItem.replaceChild(newParagraph, input);
+      }
     });
   }
 };
